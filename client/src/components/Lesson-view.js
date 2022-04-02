@@ -24,6 +24,10 @@ export default function Lesson (props) {
                <p>
                    {lesson.content}
                </p>
+
+               <form action={`/lessons/${lesson.id}?_method=DELETE`} method="POST">
+                   <input type='submit' value="DELETE"/>
+               </form>
                 
                {/* <a href={`/games/${game.id}/show`} className='btn-primary'><button>Try A Drill?</button></a>    */}
                

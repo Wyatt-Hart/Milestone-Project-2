@@ -13,15 +13,8 @@ function App() {
         <Routes>
           <Route path='*' element={<Error404 />}/>
           <Route path='/' element={<Home />} />
-<<<<<<< HEAD
           <Route path='/lessons' element={<LessonHub />} />
           <Route path='/lessons' element={<NewForm />} />
-=======
-          <Route path='/lessons' element={<LessonHub />}>
-            {/* <Route path=':id' element={<Lesson />} /> */}
-          </Route>
-          <Route path='/lessons/:id' element={<Lesson />} />
->>>>>>> a8bb5be37907af131650db416a0f6d774cd37fca
           <Route path='/games' element={<GamesHub />} />
         </Routes>
       </header>

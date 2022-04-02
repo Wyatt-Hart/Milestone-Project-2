@@ -58,25 +58,30 @@ export default function LessonHub() {
                        <h2 className='subject'>{!data ? 'Loading...' : data[lesson].topic}</h2>
                    </div>
                     <button onClick={prevClick} className='prev-btn'>
-                            <img alt='previous button' className='prev-btn-img' src='./assets/caret-left.svg' />
+                            <img alt='previous button' className='prev-btn-img' src='../Images/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
                             <Link to={`/lesson${lesson - 1}`}>
-                                <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='./assets/123.svg'/>
+                                <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='..//123.svg'/>
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson - 1].title}</p>
                             </Link>
                             <Link to={`/lesson${lesson}`}>
-                                <img alt={`lesson ${lesson}`} className='lesson-img' src='./assets/code-slash.svg'/>
+                                <img alt={`lesson ${lesson}`} className='lesson-img' src='server/public/assets/code-slash.svg'/>
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson].title}</p>
                             </Link>
                             <Link to={`/lesson${lesson + 1}`}>
-                                <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='./assets/terminal.svg' />
+                                <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='../Images/terminal.svg' />
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson + 1].title}</p>
                             </Link>
                     </div>
                     <button onClick={nextClick} className='next-btn'>
-                            <img alt='next button' className='next-btn-img' src='./assets/caret-right.svg' />
+                            <img alt='next button' className='next-btn-img' src='../Images/caret-right.svg' />
                     </button>
+
+                    <Link to={`/lessons/${id}/new`}>
+                    <button>Add Lesson</button>    
+                    </Link>
+                
                 </div>
            </main>
        </Def>

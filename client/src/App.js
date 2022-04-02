@@ -13,6 +13,7 @@ function App() {
           <Route path='*' element={<Error404 />}/>
           <Route path='/' element={<Home />} />
           <Route path='/lessons' element={<LessonHub />} />
+          <Route path='/lessons' element={<NewForm />} />
           <Route path='/games' element={<GamesHub />} />
         </Routes>
       </header>

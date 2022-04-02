@@ -45,11 +45,11 @@ router.delete('/:id', (req, res) => {
         .then(data => {
             if (!data) {
                 res.status(404).send({
-                message: `Cannot delete Tutorial with id=${id}. Maybe Tutorial was not found!`
+                message: `Cannot delete Lesson with id=${id}. Maybe Lesson was not found!`
           });} 
             else {
                 res.send({
-                message: "Tutorial was deleted successfully!"
+                message: "Lesson was deleted successfully!"
           });
         }
       })

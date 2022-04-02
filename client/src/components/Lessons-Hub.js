@@ -61,6 +61,7 @@ export default function LessonHub() {
                             <img alt='previous button' className='prev-btn-img' src='../Images/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
+<<<<<<< HEAD
                             <Link to={`/lesson${lesson - 1}`}>
                                 <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='..//123.svg'/>
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson - 1].title}</p>
@@ -71,6 +72,18 @@ export default function LessonHub() {
                             </Link>
                             <Link to={`/lesson${lesson + 1}`}>
                                 <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='../Images/terminal.svg' />
+=======
+                            <Link to={`/lessons/${!data ? 'error':data[lesson - 1]._id}`}>
+                                <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='./assets/123.svg'/>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson - 1].title}</p>
+                            </Link>
+                            <Link to={`/lessons/${!data ? 'error':data[lesson]._id}`}>
+                                <img alt={`lesson ${lesson}`} className='lesson-img' src='./assets/code-slash.svg'/>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson].title}</p>
+                            </Link>
+                            <Link to={`/lessons/${!data ? 'error':data[lesson + 1]._id}`}>
+                                <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='./assets/terminal.svg' />
+>>>>>>> a8bb5be37907af131650db416a0f6d774cd37fca
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson + 1].title}</p>
                             </Link>
                     </div>

@@ -9,7 +9,10 @@ import './fonts/Alt_Retro_Regular.ttf';
 import './fonts/Atari_Classic_Chunky.ttf';
 
 //Body Parser--Decrypts encrypted data sent by Post
+<<<<<<< HEAD
 //app.use(express.urlencoded({ extended: true }))
+=======
+>>>>>>> a8bb5be37907af131650db416a0f6d774cd37fca
 
 ReactDOM.render(
   <BrowserRouter>

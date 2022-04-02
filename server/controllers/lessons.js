@@ -42,10 +42,36 @@ router.get('/:id', (req, res) => {
 //Delete Lesson
 router.delete('/:id', (req, res) => {
     db.Lessons.findByIdAndDelete(req.params.id)
+        .then(data => {
+            if (!data) {
+                res.status(404).send({
+                message: `Cannot delete Tutorial with id=${id}. Maybe Tutorial was not found!`
+          });} 
+            else {
+                res.send({
+                message: "Tutorial was deleted successfully!"
+          });
+        }
+      })
         .catch( err => {
             console.log('err', err)
         })
 })
+
+// router.delete('/lessons/:id', (req, res) => {
+//     let id = Number(req.params.id)
+//     if (isNaN(id)) {
+//       res.render('error404')
+//     }
+//     else if (!places[id]) {
+//       res.render('error404')
+//     }
+//     else {
+//       places.splice(id, 1)
+//       res.redirect('/lessons')
+//     }
+//   })
+
 
 router.get('/', (req, res) => {
     db.Lessons.find()
